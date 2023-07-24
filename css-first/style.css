@@ -1,0 +1,121 @@
+@charset "utf-8";    /* この文章がutf-8にしたがっていることを表す。あってもなくてもおk。 */
+
+div {
+    margin-top: 200px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 200px;
+
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}
+
+.calc {
+    margin: 100px 100px 100px 100px;    /* ショートハンド上右下左*/
+
+    width: calc(100% - 50px);
+    height: 100px;
+    background-color: #5d00ff;
+}
+
+/*  要素セレクタ：タグ・id・class */
+
+p {
+    color: #6f49084f;
+    background-color: blue;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 2;    /* 行間の大きさ */
+}
+
+.text {
+    color: black;
+}
+
+#text {
+    color: green;
+}
+
+/* 擬似クラスセレクタ
+   :hover
+   マウスカーソルをのせた時だけスタイルをあてる
+*/
+a:hover {
+    color: red;
+}
+
+/* 子孫セレクタ  
+　　親セレクタに入っているタグに設定する。階層はいくつ下でもおk。
+*/
+.parent p {
+    color: aquamarine;
+}
+
+/* 子セレクタ  
+　　親セレクタの直下にないと反映されない。
+*/
+.parent > p {
+    color: #ff7fdb;
+}
+
+/* 
+　　複数のセレクタに同時に同じcssを適応したいとき
+   セレクタとセレクタの間にカンマを入れる
+   改行がおすすめ
+*/
+.abc,
+.def{
+    width: 30px;
+    height: 30px;
+    background-color: #eb27e8;
+    margin: 30px;
+}
+
+/* 
+　　優先度
+　　　・後から書いた方が強い
+　　　・詳細に書いた方が強い
+　　　・インポータントが最強
+*/
+
+
+/*
+  デバイスによって見方を変えられる@media screen
+*/
+.sample{
+    background-color: black;
+    width: 1000px;
+}
+
+@media screen and (max-width: 768px) {
+    .sample{
+        background-color: #eb27e8;
+    }
+}
+
+/*
+  デフォルト値
+  ブラウザによって違うのがやっかい
+  統一してくれるcssがある
+  ・ResetCSS
+  ・NormalizeCSS
+  ・SanitaizeCSS 新しめ。おすすめ。
+*/
+
+
+/*
+  ボックスモデル
+  ・padding 内側
+  ・margin 外側
+  ・border paddingとmarginの間にライン
+  ブロック要素：上下左右に適用。横並びできない。
+  インライン要素：横並びになる。
+*/
+.box{
+    text-align: center;
+    background-color: yellow;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid red;
+}
