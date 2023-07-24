@@ -1,0 +1,25 @@
+<!DOCTYPE html>    <!-- htmlファイルであること示す目印。 -->
+<html lang="en">    <!-- 2行目に絶対的に書く。全てのコンテンツをHTMLタグで囲うのは御作法。 -->
+<head>
+    <meta charset="UTF-8">    <!-- Webページを存在させる上で重要な情報を示すためのタグ。headタグ内で書く。charset属性で文字コードUTF-8を示して文字化けを防止する。-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <!-- インターネットエクスプローラなどの古いブラウザでも同じようにページを表示させる役割。-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 異なるデバイスで見た時にどう映るかの設定をviewportで示す。丸暗記でおk。width=device-widthはそれぞれの大きさに合わせてWebサイトを表示させる。nitial-scale=1.0は最初のスケールは１と示している。-->
+    <title>html-test</title>    <!-- tabに出る文言を設定する。-->
+    <meta name="description" content="text text text">    <!-- Google検索に表示される重要な情報。-->
+</head>
+<body>
+    <a target="_blank" href="https://validator.nu/">検証サイト</a>
+
+    <h1 id="headline">見出し１</h1>
+    <p class="text">段落</p>
+
+<style>
+    #headline {
+        color: red;
+    }
+    .text {
+        color: blue;
+    }
+</style>
+</body>
+</html> 
