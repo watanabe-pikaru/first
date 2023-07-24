@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample4</title>
+</head>
+<body>
+    <script>
+        //問題を作る
+
+        const today = new Date();
+        const q1 = today.getMilliseconds();
+        const q2 = today.getSeconds();
+        let answer = window.prompt(`${q1}+${q2}は？`);
+        const collect = q1 + q2;
+
+        if (answer == collect) {
+            window.alert('正解です！');
+        } else {
+            window.alert('ハズレです！');
+        }
+
+        /*
+        let answer = window.prompt('1+1は？');
+        
+        if (answer == 2) {
+            window.alert('正解です！');
+        } else {
+            window.alert('ハズレです！');
+        }
+        
+        let age = window.prompt('年齢は？');
+        
+        if (age >= 20) {
+            window.alert('お酒を購入できます！');
+        } else {
+            window.alert('未成年はお酒を購入できません。');
+        }
+
+        if (age >= 20) {
+            window.alert('お酒を購入できます！');
+        } else if (age < 10) {
+            window.alert('キッズ料金です。');
+        }
+        */
+       
+    </script>
+</body>
+</html>

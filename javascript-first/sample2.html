@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample2</title>
+</head>
+<body>
+    <h1>ご挨拶</h1>
+    <p id="message"></p>
+
+    <!--  
+    <div>
+        <button onClick="window.alert('１０時です。')">
+            今何時？
+        </button>
+    </div>
+    -->
+
+    <div>
+        <button id="btn1">今何時？</button>
+    </div>
+
+
+    <script>
+        document.getElementById('message').innerHTML = 'こんにちは';
+        document.getElementById('btn1').addEventListener('click',() => {
+            window.alert('10時です')
+        })
+    </script>
+</body>
+</html>

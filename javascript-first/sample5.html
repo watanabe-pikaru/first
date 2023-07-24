@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>万年カレンダー</title>
+</head>
+<body>
+    <script>
+        /*
+        for (let i=0; i<100; i++){
+            document.write(i + '<br>');
+        }
+        */
+
+        // let i = 0;
+        // while (i<100) {
+        //     document.write(i + '<br>');
+        //     i++
+        // }
+
+        const thisYear = 2023;
+        let day = new Date(thisYear, 0, 1); //(2021年の１月１日のDateオブジェクトを作る)
+        const week = ['日','月','火','水','木','金','土'];
+
+        while (day.getFullYear() === thisYear) {   //同じ年の間は以下を繰り返す
+        document.write(day.getFullYear());
+        document.write('/');
+        document.write(day.getMonth() + 1);
+        document.write('/');
+        document.write(day.getDate());
+        document.write('(' + week[day.getDay()] + ')');
+        document.write('<br>');
+
+        //1日足す
+        day.setDate(day.getDate() + 1);
+        }
+
+    </script>
+</body>
+</html>
